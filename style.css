@@ -19,6 +19,8 @@ body {
 
 main h1 {
     text-align: center;
+    animation: step_1 1.5s ease-in forwards;
+    opacity: 0;
 }
 
 a {
@@ -30,6 +32,8 @@ figure img {
     width: auto;
     height: 150px;
     border-radius: 5%;
+    opacity: 0;
+    animation: step_2 2s ease-out 1.5s forwards;
 }
 
 
@@ -75,8 +79,92 @@ main {
     align-items: center;
 }
 
+.point1 { 
+    opacity: 0;
+    animation: step_3 2s ease-in-out 2s forwards;
+}
+
+.point2 { 
+    opacity: 0;
+    animation: step_4 2s ease-in-out 2.5s forwards;
+}
+
+.other_points { 
+    opacity: 0;
+    animation: step_5 3s ease-in-out 3.5s forwards;
+}
+
 .part2 {
     width: 30%;
     margin: 0.25rem;
     padding: 0.25rem;
+    opacity: 0;
+    animation: left 3s ease-in-out 2.5s forwards;
+}
+
+@keyframes step_1 {
+    0% {
+        opacity: 1;
+        position: relative;
+        top: -25vh;
+    }
+    10% {
+        border-bottom: none;
+    }
+    100% {
+        opacity: 1;
+        top: 25vh;
+        border-bottom: #fff 1px solid;
+    }
+}
+
+@keyframes step_2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes step_3 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes step_4 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes step_5 {
+    0% {
+        opacity: 1;
+        position: relative;
+        bottom: -70vh;
+    }
+    100% {
+        opacity: 1;
+        bottom: 70vh;
+    }
+}
+
+@keyframes left {
+    0% {
+      position: relative;
+      right: -50vw;
+      opacity: 1;
+    }
+    100% {
+        right: 50vw;
+        opacity: 1;
+    }
 }
